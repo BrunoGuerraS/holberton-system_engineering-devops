@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # displays the content of the file /etc/passwd.
-while ITF= read -r lines
+while IFS= read -r lines
 do
 	echo "$lines" | cut -d ":" -f 1,3,6
 done < "/etc/passwd"
