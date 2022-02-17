@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# display "Best School" 10 times and hi in 9th
+a=0
+while [ $a -le 10 ]
+do
+	echo "Best School"
+	if test $a == 9
+	then
+		echo "Hi"
+	fi
+	a=$(( a + 1 ))
+done
