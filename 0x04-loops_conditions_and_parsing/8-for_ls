@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# displays The content of the current directory
+# displays In a list format
+# displays Where only the part of the name after the first dash is displayed (refer to the example)
+#!/usr/bin/env bash
+for files in *
+do
+	if [ -f "$files" ]
+	then
+		echo "$files" | cut -d "-" -f 2-
+	fi
+done
