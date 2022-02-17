@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# displays numbers from 1 to 100.
 for (( a=1; a<=100; a++ ))
 do
 	if [[ $(( a%3 )) -eq 0 && $(( a%5)) -eq 0 ]]
