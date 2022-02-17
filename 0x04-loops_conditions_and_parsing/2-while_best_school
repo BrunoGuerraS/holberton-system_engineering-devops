@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# display "Best School 10 times"
+a=0
+while [ $a -le 9 ]
+do
+	echo "Best School" 
+	a=$((a + 1))
+done
