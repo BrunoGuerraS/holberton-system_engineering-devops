@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Creation of files and control of specific behavior of a received signal
+echo $$ > /var/run/myscript.pid
+trap 'echo "I hate the kill command"; rm -f /var/run/myscript.pid' SIGTERM
+trap 'echo "Y U no love me?!"' SIGINT
+trap 'rm "/var/run/myscript.pid"' SIGQUIT
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2;
+done
