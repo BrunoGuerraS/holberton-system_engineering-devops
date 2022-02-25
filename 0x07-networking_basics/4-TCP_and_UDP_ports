@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+#this script
 netstat -lp
