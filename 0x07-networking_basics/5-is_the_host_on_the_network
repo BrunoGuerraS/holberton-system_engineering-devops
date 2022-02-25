@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #that pings an IP address passed as an argument.
-if [ $# -ne 1]
+if [ $# -ne 1 ]
 then
 	eeho "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 else
