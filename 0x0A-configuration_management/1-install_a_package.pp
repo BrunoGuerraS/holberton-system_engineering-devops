@@ -2,5 +2,6 @@
 
 package { 'screen':
  ensure   => '2.5.0',
- provider => gem
+ provider => 'gem',
+ source   => 'http://rubygems.org/',
 }
