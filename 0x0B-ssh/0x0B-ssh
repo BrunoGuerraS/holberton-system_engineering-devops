@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Add the SSH public key below to your server so that we can connect using the ubuntu user
+ssh-copy-id -f -i ~/.ssh/id_rsa.pub ubuntu@35.237.243.237
