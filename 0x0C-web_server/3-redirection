@@ -4,7 +4,7 @@
 # update os packages
 sudo apt-get -y update
 # Install nginx
-sudo apt-get install ngix
+sudo apt-get -y install nginx
 # add permission
 sudo chown -R ubuntu /var/www
 # Change the defaul content of index.html for nginx
