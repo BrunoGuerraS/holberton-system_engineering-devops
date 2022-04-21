@@ -8,7 +8,7 @@ sudo apt-get install ngix
 # add permission
 sudo chown -R ubuntu /var/www
 # Change the defaul content of index.html for nginx
-echo "Hello World" > /var/ww/html/index.nginx-debian.html
+echo "Hello World" > /var/www/html/index.nginx-debian.html
 # 301 Moved Permanently
 sudo sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/BrunoGuerraS permanent;/" /etc/nginx/sites-available/default
 # Start nginx
