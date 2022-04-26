@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #we conect to the error page 404
-
 sudo apt-get -y update
 sudo apt-get install nginx -y
 sudo chown -R ubuntu /var/www/html
-echo "Hello World" > /var/www/html/index.nginx-debian.html
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
 echo "Ceci n'est pas une page" > /var/www/html/404.html
+sudo service nginx start
 sudo sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/BrunoGuerraS permanent;/" /etc/nginx/sites-available/default
 sudo sed -i "s/^server\s{/server {\n\terror_page 404 \/404.html;/1" /etc/nginx/sites-available/default
 sudo sed -i "s/^server\s{/server {\n\tadd_header X-Served-By $hostname;/1" /etc/nginx/sites-available/default
