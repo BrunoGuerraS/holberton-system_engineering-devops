@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
-#Install HAproxy
-sudo apt-get -y update
-sudo apt-get install nginx -y
-sudo apt install haproxy
-
-
+## Linux update and upgrade
+sudo apt update && sudo apt upgrade -y
+sudo apt-get install -y --no-install-recommends software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-2.4 -y
+##  Install Haproxy
+sudo apt install haproxy -y
+sudo service haproxy start
+sed -i "$ a frontend Frontend\n\tbind *:80\n\tmode http\n\tdefault_backend Backend\nbackend Backend\n\tbalance roundrobin\n\tserver 3377-web-01 34.74.254.2:80 check\n\tserver 3377-web-02 52.207.225.1:80 check" /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
+sudo apt update && sudo apt upgrade -y
