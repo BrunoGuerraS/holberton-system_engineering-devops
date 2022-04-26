@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Install HAproxy
+sudo apt-get -y update
+sudo apt-get install nginx -y
+sudo apt install haproxy
+
+
