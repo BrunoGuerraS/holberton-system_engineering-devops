@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#get all information from your web
+if [ $# -eq 2 ]; then
+    domain_web="$2.$1"
+else
+    domain_web="www.$1 lb-01.$1 web-01.$1 web-02.$1"
+fi
+
+dig $domain | awk '/ANSWER SECTION:/{getline; split($0,a,"."); print "The subdomain", a[1], "is a", $4, "record and points to", $5}'
