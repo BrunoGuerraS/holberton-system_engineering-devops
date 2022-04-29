@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#fixing code
+sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
+sudo pkill -1 nginx
