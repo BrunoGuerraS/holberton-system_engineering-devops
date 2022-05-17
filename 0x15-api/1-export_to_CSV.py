@@ -17,11 +17,13 @@ def gather():
     prompt = "Employee {} is done with tasks({}/{}):"
     list_todo = []
 
+    print("the worker is :")
+    print(user)
     for todo in todos:
         todo_csv = {}
         todo_csv = {
-            'USER_ID': argv[1],
-            'USERNAME': name,
+            'USER_ID': str(argv[1]),
+            'USERNAME': str(user.get('username')),
             'TASK_COMPLETED_STATUS': str(todo.get('completed')),
             'TASK_TITLE': str(todo.get('title'))
         }
