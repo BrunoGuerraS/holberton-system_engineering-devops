@@ -18,6 +18,7 @@ def gather():
     list_todo = []
 
     for todo in todos:
+        todo_csv = {}
         todo_csv = {
             'USER_ID': argv[1],
             'USERNAME': name,
