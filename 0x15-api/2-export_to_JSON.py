@@ -3,9 +3,9 @@
 Python script that, using this REST API
 """
 import csv
+import json
 import requests
 from sys import argv
-import json
 
 
 def gather():
