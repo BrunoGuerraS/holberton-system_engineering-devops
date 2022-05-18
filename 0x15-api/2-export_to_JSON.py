@@ -19,14 +19,14 @@ def gather():
     list_todo = []
 
     for todo in todos:
-        todo_csv = {
-            'task': str(argv[1]),
-            'completed': str(todo.get('completed')),
-            'username': str(user.get('username')),
-        }
-        list_todo.append(todo_csv)
         if todo.get('completed'):
             todok = todok + 1
+            todo_csv = {
+                'task': str(argv[1]),
+                'completed': str(todo.get('completed')),
+                'username': str(user.get('username')),
+            }
+            list_todo.append(todo_csv)
 
     for item in list_todo:
         print(item)
